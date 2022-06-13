@@ -6,13 +6,6 @@ import MovieCard  from './MovieCard';
 // OMDB API KEY
 const API_URL = 'https://www.omdbapi.com?apikey=c1eea68e';
 
-// const movie1 = {
-//   "Title": "Avengers: Endgame",
-//   "Type": "movie",
-//   "Year": "2019",
-//   "imdbID": "tt4154796",
-//   "Poster": "N/A",
-// }
 
 function App() {
 
@@ -27,7 +20,7 @@ function App() {
   }
 
   useEffect(()=>{
-    searchMovies('avengers');
+    searchMovies('detective');
   }, [])
 
 
@@ -56,6 +49,7 @@ function App() {
               movies.map((movie) => (
               
               <MovieCard key={movie.imdbID} movie={movie} />
+
             ))}
 
           </div>
